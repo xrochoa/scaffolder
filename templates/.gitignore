@@ -1,10 +1,9 @@
-# OS X folder meta
+# OS X meta file for folder options
 .DS_Store
 
-# Bower and npm packages
+# bower and npm packages
 bower_components
 node_modules
 
-# distribution and brandly_test
+# distribution
 dist
-brandly_test

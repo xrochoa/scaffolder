@@ -1,4 +1,3 @@
-#USE sudo chmod 700 file.sh TO MAKE EXECUTABLE
 #Inside ~
 touch server.js
 touch gulpfile.js

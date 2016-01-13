@@ -66,7 +66,12 @@ gulp.task('css', function() {
         .pipe(sass())
         .pipe(gulp.dest('src/css')) //saves at source
         .pipe(autoprefixer({
-            browsers: ['last 2 versions', '> 5%', 'ie >= 9', ],
+            browsers: ['last 3 versions',
+                'ie >= 8',
+                'ios >= 7',
+                'android >= 4.4',
+                'bb >= 10'
+            ],
             cascade: false
         }))
         .pipe(minifyCss())
@@ -107,18 +112,18 @@ gulp.task('html', function() {
             package: 'angular-animate',
             cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-animate.min.js'
         }, {
-            file: 'ng-file-upload/ng-file-upload.js',
-            package: 'ng-file-upload',
-            cdn: 'https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/${ version }/ng-file-upload.min.js'
-        }, {
             file: 'bootstrap/dist/css/bootstrap.css',
             package: 'bootstrap',
             cdn: 'https://maxcdn.bootstrapcdn.com/bootstrap/${ version }/css/bootstrap.min.css'
         }, {
-            file: 'angular-bootstrap/ui-bootstrap-tpls.js',
-            package: 'angular-bootstrap',
-            cdn: 'https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/${ version }/ui-bootstrap-tpls.min.js'
-        }, {
+            file: 'jquery/dist/jquery.js',
+            package: 'jquery',
+            cdn: 'https://ajax.googleapis.com/ajax/libs/jquery/${ version }/jquery.min.js'
+        },  {
+            file: 'd3/d3.js',
+            package: 'd3',
+            cdn: 'https://cdnjs.cloudflare.com/ajax/libs/d3/${ version }/d3.js'
+        },  {
             file: 'css/style.css',
             cdn: 'css/style.min.css'
         }, {

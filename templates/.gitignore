@@ -1,0 +1,10 @@
+# OS X folder meta
+.DS_Store
+
+# Bower and npm packages
+bower_components
+node_modules
+
+# distribution and brandly_test
+dist
+brandly_test

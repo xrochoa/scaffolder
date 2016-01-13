@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+https://developers.facebook.com/docs/sharing/webmasters
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom css -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- AngularJS -->
+    <script src="angular/angular.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="controller">
+    <h1 ng-bind="init"></h1>
+    <div ng-include="'views/about.html'"></div>
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <!-- Custom javascript -->
+    <script src="js/bundle.js"></script>
+</body>
+
+</html>

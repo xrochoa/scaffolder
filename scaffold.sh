@@ -76,24 +76,37 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 	if [ $# == 1 ]; then
 	    case $1 in
-		    -j | -jquery ) 		echo "Scaffolding JQuery project"
-								cat $DIR/templates/jquery.html >> src/index.html
-								bower install jquery --save
-		        				;;
-		    -d | -d3 ) 			echo "Scaffolding d3.js project"
-								cat $DIR/templates/d3.html >> src/index.html
+		    -d | -d3 ) 			echo "Scaffolding d3.js and Bootstrap project"
+								cat $DIR/templates/d3/index.html >> src/index.html
 								bower install d3 --save
-		        				;;
-		    -a | -angular ) 	echo "Scaffolding AngularJS project"
-								cat $DIR/templates/angular.html >> src/index.html
-								bower install angular --save
-		        				;;
-		    -b | -bootstrap ) 	echo "Scaffolding Bootstrap project"
-								cat $DIR/templates/bootstrap.html >> src/index.html
 								bower install bootstrap --save
 		        				;;
+		    -a | -angular ) 	echo "Scaffolding AngularJS, Bootstrap and UI Bootstrap project"
+								cat $DIR/templates/angular/index.html >> src/index.html
+								cat $DIR/templates/angular/about.html >> src/views/about.html
+								cat $DIR/templates/angular/app.js >> src/js/app/app.js
+								cat $DIR/templates/angular/app.about.js >> src/js/app/app.about.js
+								cat $DIR/templates/angular/app.controller.js >> src/js/app/app.controller.js
+								bower install angular --save
+								bower install bootstrap --save
+								bower install angular-bootstrap --save
+								bower install angular-animate --save
+								bower install angular-aria --save
+								bower install angular-cookies --save
+								bower install angular-message-format --save
+								bower install angular-messages --save
+								bower install angular-resource --save
+								bower install angular-route --save
+								bower install angular-sanitize --save
+								bower install angular-touch --save
+		        				;;
+		    -j | -jquery ) 		echo "Scaffolding JQuery and Bootstrap project"
+								cat $DIR/templates/bootstrap/index.html >> src/index.html
+								bower install bootstrap --save
+								bower install jquery --save
+		        				;;
 		    -p | -phaser )	 	echo "Scaffolding Phaser project"
-								cat $DIR/templates/phaser.html >> src/index.html
+								cat $DIR/templates/phaser/index.html >> src/index.html
 								bower install phaser --save
 		        				;;
 		    * ) 				echo "There is no support for that. Scaffolding an simple template"
@@ -115,6 +128,9 @@ echo "###### Scafolded by Xavi Ro" >> README.md
 git init
 git add .
 git commit -m 'first commit'
+
+#done
+toilet -f bigmono9 -F gay 'DONE!'
 
 
 

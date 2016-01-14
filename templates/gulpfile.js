@@ -104,13 +104,41 @@ gulp.task('html', function() {
             package: 'angular',
             cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular.min.js'
         }, {
+            file: 'angular-animate/angular-animate.js',
+            package: 'angular-animate',
+            cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-animate.min.js'
+        }, {
+            file: 'angular-aria/angular-aria.js',
+            package: 'angular-aria',
+            cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-aria.min.js'
+        }, {
+            file: 'angular-cookies/angular-cookies.js',
+            package: 'angular-cookies',
+            cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-cookies.min.js'
+        }, {
+            file: 'angular-message-format/angular-message-format.js',
+            package: 'angular-message-format',
+            cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-message-format.min.js'
+        }, {
+            file: 'angular-messages/angular-messages.js',
+            package: 'angular-messages',
+            cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-messages.min.js'
+        }, {
+            file: 'angular-resource/angular-resource.js',
+            package: 'angular-resource',
+            cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-resource.min.js'
+        }, {
             file: 'angular-route/angular-route.js',
             package: 'angular-route',
             cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-route.min.js'
         }, {
-            file: 'angular-animate/angular-animate.js',
-            package: 'angular-animate',
-            cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-animate.min.js'
+            file: 'angular-sanitize/angular-sanitize.js',
+            package: 'angular-sanitize',
+            cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-sanitize.min.js'
+        }, {
+            file: 'angular-touch/angular-touch.js',
+            package: 'angular-touch',
+            cdn: 'https://ajax.googleapis.com/ajax/libs/angularjs/${ version }/angular-touch.min.js'
         }, {
             file: 'bootstrap/dist/css/bootstrap.css',
             package: 'bootstrap',
@@ -119,11 +147,19 @@ gulp.task('html', function() {
             file: 'jquery/dist/jquery.js',
             package: 'jquery',
             cdn: 'https://ajax.googleapis.com/ajax/libs/jquery/${ version }/jquery.min.js'
-        },  {
+        }, {
+            file: 'angular-bootstrap/ui-bootstrap.js',
+            package: 'angular-bootstrap',
+            cdn: 'https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/${ version }/ui-bootstrap.min.js'
+        }, {
             file: 'd3/d3.js',
             package: 'd3',
             cdn: 'https://cdnjs.cloudflare.com/ajax/libs/d3/${ version }/d3.js'
-        },  {
+        }, {
+            file: 'phaser/build/phaser.js',
+            package: 'phaser',
+            cdn: 'https://cdnjs.cloudflare.com/ajax/libs/phaser/${ version }/phaser.min.js'
+        },{
             file: 'css/style.css',
             cdn: 'css/style.min.css'
         }, {

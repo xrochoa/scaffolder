@@ -57,7 +57,7 @@ npm install gulp-livereload --save-dev
 npm install gulp-concat --save-dev
 npm install gulp-rename --save-dev
 npm install gulp-clean --save-dev
-npm install gulp-run-sequence --save-dev
+npm install run-sequence --save-dev
 
 #Choose from templates
 	#Get bash script path

@@ -144,6 +144,10 @@ gulp.task('html', function() {
             package: 'bootstrap',
             cdn: 'https://maxcdn.bootstrapcdn.com/bootstrap/${ version }/css/bootstrap.min.css'
         }, {
+            file: 'bootstrap/dist/js/bootstrap.js',
+            package: 'bootstrap',
+            cdn: 'https://maxcdn.bootstrapcdn.com/bootstrap/${ version }/js/bootstrap.min.js'
+        }, {
             file: 'jquery/dist/jquery.js',
             package: 'jquery',
             cdn: 'https://ajax.googleapis.com/ajax/libs/jquery/${ version }/jquery.min.js'
@@ -159,7 +163,7 @@ gulp.task('html', function() {
             file: 'phaser/build/phaser.js',
             package: 'phaser',
             cdn: 'https://cdnjs.cloudflare.com/ajax/libs/phaser/${ version }/phaser.min.js'
-        },{
+        }, {
             file: 'css/style.css',
             cdn: 'css/style.min.css'
         }, {

@@ -2,6 +2,16 @@
 
 Prepares folders and files, a double Node.js server, a gulfile for automation, installs dependencies and initializes a git repository.
 
+##Use
+** sudo scaffold**
+-d (for bootstrap and d3)
+-a (for bootstrap and angular) 
+-j (for bootstrap and jquery) 
+-p (for phaser)
+nothing(for nothing)
+
+
+
 ##Folder structure
 
 + **/src** (source code)

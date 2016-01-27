@@ -41,23 +41,23 @@ npm install express --save
 bower init
 
 #gulp
-npm install gulp --save-dev
-npm install jshint --save-dev
-npm install gulp-jshint --save-dev
-npm install gulp-browserify --save-dev
-npm install gulp-uglify --save-dev
-npm install gulp-sass --save-dev
-npm install gulp-autoprefixer --save-dev
-npm install gulp-minify-css --save-dev
-npm install gulp-imagemin --save-dev
-npm install gulp-cdnizer --save-dev
-npm install gulp-minify-html --save-dev
-npm install gulp-nodemon --save-dev
-npm install gulp-livereload --save-dev
-npm install gulp-concat --save-dev
-npm install gulp-rename --save-dev
-npm install gulp-clean --save-dev
-npm install run-sequence --save-dev
+sudo npm install gulp --save-dev
+sudo npm install jshint --save-dev
+sudo npm install gulp-jshint --save-dev
+sudo npm install gulp-browserify --save-dev
+sudo npm install gulp-uglify --save-dev
+sudo npm install gulp-sass --save-dev
+sudo npm install gulp-autoprefixer --save-dev
+sudo npm install gulp-minify-css --save-dev
+sudo npm install gulp-imagemin --save-dev
+sudo npm install gulp-cdnizer --save-dev
+sudo npm install gulp-minify-html --save-dev
+sudo npm install gulp-nodemon --save-dev
+sudo npm install gulp-livereload --save-dev
+sudo npm install gulp-concat --save-dev
+sudo npm install gulp-rename --save-dev
+sudo npm install gulp-clean --save-dev
+sudo npm install run-sequence --save-dev
 
 #Choose from templates
 	#Get bash script path

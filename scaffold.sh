@@ -125,7 +125,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #git & github
 	#gets folder name without path
 echo "# ${PWD##*/}" >> README.md
-echo "###### Scafolded by Xavi Ro" >> README.md
+echo "###### by Xavi Ro" >> README.md
 git init
 git add .
 git commit -m 'first commit'

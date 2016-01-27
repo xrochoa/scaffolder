@@ -3,6 +3,7 @@ touch server.js
 touch gulpfile.js
 touch .gitignore
 mkdir tests
+mkdir utils
 mkdir src
 cd src
 	#Inside SRC

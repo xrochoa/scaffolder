@@ -9,3 +9,6 @@ node_modules
 dist
 src/js/bundle.js
 src/css/style.css
+
+#npm error log
+npm-debug.log

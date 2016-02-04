@@ -66,11 +66,15 @@ gulp.task('css', function() {
         .pipe(sass())
         .pipe(gulp.dest('src/css')) //saves at source
         .pipe(autoprefixer({
-            browsers: ['last 3 versions',
-                'ie >= 8',
-                'ios >= 7',
-                'android >= 4.4',
-                'bb >= 10'
+            browsers: [
+                "Android 2.3",
+                "Android >= 4",
+                "Chrome >= 20",
+                "Firefox >= 24",
+                "Explorer >= 8",
+                "iOS >= 6",
+                "Opera >= 12",
+                "Safari >= 6"
             ],
             cascade: false
         }))

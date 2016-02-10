@@ -36,29 +36,29 @@ cd src
 
 #npm
 npm init
-npm install express --save
+npm install express --save -E
 
 #bower
 bower init
 
 #gulp
-sudo npm install gulp --save-dev
-sudo npm install jshint --save-dev
-sudo npm install gulp-jshint --save-dev
-sudo npm install gulp-browserify --save-dev
-sudo npm install gulp-uglify --save-dev
-sudo npm install gulp-sass --save-dev
-sudo npm install gulp-autoprefixer --save-dev
-sudo npm install gulp-minify-css --save-dev
-sudo npm install gulp-imagemin --save-dev
-sudo npm install gulp-cdnizer --save-dev
-sudo npm install gulp-minify-html --save-dev
-sudo npm install gulp-nodemon --save-dev
-sudo npm install gulp-livereload --save-dev
-sudo npm install gulp-concat --save-dev
-sudo npm install gulp-rename --save-dev
-sudo npm install gulp-clean --save-dev
-sudo npm install run-sequence --save-dev
+sudo npm install gulp --save-dev -E
+sudo npm install jshint --save-dev -E
+sudo npm install gulp-jshint --save-dev -E
+sudo npm install gulp-browserify --save-dev -E
+sudo npm install gulp-uglify --save-dev -E
+sudo npm install gulp-sass --save-dev -E
+sudo npm install gulp-autoprefixer --save-dev -E
+sudo npm install gulp-minify-css --save-dev -E
+sudo npm install gulp-imagemin --save-dev -E
+sudo npm install gulp-cdnizer --save-dev -E
+sudo npm install gulp-minify-html --save-dev -E
+sudo npm install gulp-nodemon --save-dev -E
+sudo npm install gulp-livereload --save-dev -E
+sudo npm install gulp-concat --save-dev -E
+sudo npm install gulp-rename --save-dev -E
+sudo npm install gulp-clean --save-dev -E
+sudo npm install run-sequence --save-dev -E
 
 #Choose from templates
 	#Get bash script path
@@ -79,8 +79,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 	    case $1 in
 		    -d | -d3 ) 			echo "Scaffolding d3.js and Bootstrap project"
 								cat $DIR/templates/d3/index.html >> src/index.html
-								bower install d3 --save
-								bower install bootstrap --save
+								bower install d3 --save -E
+								bower install bootstrap --save -E
 		        				;;
 		    -a | -angular ) 	echo "Scaffolding AngularJS, Bootstrap and UI Bootstrap project"
 								cat $DIR/templates/angular/index.html >> src/index.html
@@ -88,27 +88,27 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 								cat $DIR/templates/angular/app.js >> src/js/app/app.js
 								cat $DIR/templates/angular/app.about.js >> src/js/app/app.about.js
 								cat $DIR/templates/angular/app.controller.js >> src/js/app/app.controller.js
-								bower install angular --save
-								bower install bootstrap --save
-								bower install angular-bootstrap --save
-								bower install angular-animate --save
-								bower install angular-aria --save
-								bower install angular-cookies --save
-								bower install angular-message-format --save
-								bower install angular-messages --save
-								bower install angular-resource --save
-								bower install angular-route --save
-								bower install angular-sanitize --save
-								bower install angular-touch --save
+								bower install angular --save -E
+								bower install bootstrap --save -E
+								bower install angular-bootstrap --save -E
+								bower install angular-animate --save -E
+								bower install angular-aria --save -E
+								bower install angular-cookies --save -E
+								bower install angular-message-format --save -E
+								bower install angular-messages --save -E
+								bower install angular-resource --save -E
+								bower install angular-route --save -E
+								bower install angular-sanitize --save -E
+								bower install angular-touch --save -E
 		        				;;
 		    -j | -jquery ) 		echo "Scaffolding JQuery and Bootstrap project"
 								cat $DIR/templates/bootstrap/index.html >> src/index.html
-								bower install bootstrap --save
-								bower install jquery --save
+								bower install bootstrap --save -E
+								bower install jquery --save -E
 		        				;;
 		    -p | -phaser )	 	echo "Scaffolding Phaser project"
 								cat $DIR/templates/phaser/index.html >> src/index.html
-								bower install phaser --save
+								bower install phaser --save -E
 		        				;;
 		    * ) 				echo "There is no support for that. Scaffolding an simple template"
 		esac

@@ -1,5 +1,10 @@
 'use strict';
 
+var googleAnalytics = require('./ga.js');
+
+var controller = require('./app.controller.js');
+var about = require('./app.about.js');
+
 var app = window.angular.module('app', [])
-    .controller('controller', ['$scope', require('./app.controller.js')])
-    .controller('about', ['$scope', require('./app.about.js')]);
+    .controller('controller', ['$scope', controller])
+    .controller('about', ['$scope', ]);

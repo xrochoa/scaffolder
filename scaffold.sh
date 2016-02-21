@@ -27,6 +27,7 @@ cd src
 		cd app
 			#Inside APP
 			touch app.js
+			touch ga.js
 			cd ..
 		#Inside JS
 		cd ..
@@ -79,6 +80,11 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 	cat $DIR/templates/gulpfile.js >> gulpfile.js
 	#.ignore
 	cat $DIR/templates/.gitignore >> .gitignore
+	#app.js and Google Analytics
+	cat $DIR/templates/app.js >> src/js/app/app.js
+	cat $DIR/templates/ga.js >> src/js/app/ga.js
+
+
 	#index.html
 	if [ $# == 0 ]; then
 		echo "Scaffolding an simple template"
@@ -95,7 +101,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 		    -a | -angular ) 	echo "Scaffolding AngularJS, Bootstrap and UI Bootstrap project"
 								cat $DIR/templates/angular/index.html >> src/index.html
 								cat $DIR/templates/angular/about.html >> src/views/about.html
-								cat $DIR/templates/angular/app.js >> src/js/app/app.js
+								cat $DIR/templates/angular/app.js > src/js/app/app.js
 								cat $DIR/templates/angular/app.about.js >> src/js/app/app.about.js
 								cat $DIR/templates/angular/app.controller.js >> src/js/app/app.controller.js
 								bower install angular --save -E

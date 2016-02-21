@@ -8,12 +8,19 @@ mkdir src
 cd src
 	#Inside SRC
 	touch index.html
-	mkdir js
+	mkdir views
+	mkdir img
+	mkdir sprite
 	mkdir scss
 	mkdir css
-	mkdir img
-	mkdir views
+	mkdir js
 	mkdir res
+	cd scss
+		#Inside SCSS
+		touch style.scss
+		touch _palette.scss
+		cd ..
+	#Inside SRC
 	cd js
 		#Inside JS
 		mkdir app
@@ -22,13 +29,6 @@ cd src
 			touch app.js
 			cd ..
 		#Inside JS
-		cd ..
-	#Inside SRC
-	cd scss
-		#Inside SCSS
-		touch style.scss
-		touch _variables.scss
-		touch _mixins.scss
 		cd ..
 	#Inside SRC
 	cd ..
@@ -43,22 +43,32 @@ bower init
 
 #gulp
 sudo npm install gulp --save-dev -E
+#gulp images
+sudo npm install gulp-imagemin --save-dev -E
+sudo npm install sprity --save-dev -E
+sudo npm install sprity-sass --save-dev -E
+#gulp html
+sudo npm install gulp-cdnizer --save-dev -E
+sudo npm install gulp-minify-html --save-dev -E
+#gulp css
+sudo npm install gulp-sass --save-dev -E
+sudo npm install gulp-autoprefixer --save-dev -E
+sudo npm install gulp-minify-css --save-dev -E
+#gulp javascript
 sudo npm install jshint --save-dev -E
 sudo npm install gulp-jshint --save-dev -E
 sudo npm install gulp-browserify --save-dev -E
 sudo npm install gulp-uglify --save-dev -E
-sudo npm install gulp-sass --save-dev -E
-sudo npm install gulp-autoprefixer --save-dev -E
-sudo npm install gulp-minify-css --save-dev -E
-sudo npm install gulp-imagemin --save-dev -E
-sudo npm install gulp-cdnizer --save-dev -E
-sudo npm install gulp-minify-html --save-dev -E
+#gulp server
 sudo npm install gulp-nodemon --save-dev -E
 sudo npm install gulp-livereload --save-dev -E
+#gulp utilities
+sudo npm install gulp-clean --save-dev -E
+sudo npm install gulp-if --save-dev -E
 sudo npm install gulp-concat --save-dev -E
 sudo npm install gulp-rename --save-dev -E
-sudo npm install gulp-clean --save-dev -E
 sudo npm install run-sequence --save-dev -E
+
 
 #Choose from templates
 	#Get bash script path
@@ -118,12 +128,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 		echo "There is no support for that. Scaffolding an simple template"
 		cat $DIR/templates/index.html >> src/index.html
 	fi
-	
-	#_palette.scss
-	cat $DIR/templates/_palette.scss >> src/scss/_palette.scss
 
 #git & github
-	#gets folder name without path
 echo "# ${PWD##*/}" >> README.md
 echo "###### by Xavi Ro" >> README.md
 git init

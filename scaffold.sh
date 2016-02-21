@@ -19,6 +19,7 @@ cd src
 		#Inside SCSS
 		touch style.scss
 		touch _palette.scss
+		touch _sprite.scss
 		cd ..
 	#Inside SRC
 	cd js
@@ -41,6 +42,7 @@ npm install express --save -E
 
 #bower
 bower init
+bower install normalize.css --save -E
 
 #gulp
 sudo npm install gulp --save-dev -E
@@ -83,6 +85,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 	#app.js and Google Analytics
 	cat $DIR/templates/app.js >> src/js/app/app.js
 	cat $DIR/templates/ga.js >> src/js/app/ga.js
+	#scss
+	cat $DIR/templates/style.scss >> src/scss/style.scss
+	cat $DIR/templates/_palette.scss >> src/scss/_palette.scss
 
 
 	#index.html

@@ -47,9 +47,10 @@ bower install normalize.css --save -E
 #gulp
 sudo npm install gulp --save-dev -E
 #gulp images
-sudo npm install gulp-imagemin --save-dev -E
 sudo npm install sprity --save-dev -E
 sudo npm install sprity-sass --save-dev -E
+sudo npm install gulp-image-resize --save-dev -E
+sudo npm install gulp-imagemin --save-dev -E
 #gulp html
 sudo npm install gulp-cdnizer --save-dev -E
 sudo npm install gulp-minify-html --save-dev -E

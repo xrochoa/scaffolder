@@ -1,9 +1,5 @@
 //Optional - Bootstrap-sass (already uses Normalize.css)
-//Copy ../../bower_components/bootstrap-sass/assets/stylesheets to ./bootstrap
 //@import "bootstrap/bootstrap";
-
-//Reset - Normalize.css (remove if using bootstrap-sass)
-@import "../../bower_components/normalize-css/normalize.css";
 
 //Palette variables
 @import "palette";

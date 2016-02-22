@@ -258,24 +258,15 @@ gulp.task('server', function() {
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('src/sprite/**/*', ['sprite']);
-    gulp.watch('src/img/**/*@2x.*', ['images']);
+    gulp.watch('src/img/**/*@2x.*', ['resize', 'img']);
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/scss/**/*.scss', ['css']);
     gulp.watch('src/js/app/**/*.js', ['lintjs', 'bundlejs']);
     gulp.watch('src/res/**/*', ['res']);
 });
 
-// Images Task
-gulp.task('images', function() {
-    runSequence('resize', 'img');
-});
-
-// Javascript Task
-gulp.task('javascript', function() {
-    runSequence('lintjs', 'bundlejs');
-});
 
 // Default Task
 gulp.task('default', function() {
-    runSequence('clean', 'images', 'html', 'css', 'javascript', 'res', 'watch', 'server');
+    runSequence('clean', 'sprite', 'resize', 'img', 'html', 'css', 'javascript', 'res', 'watch', 'server');
 });

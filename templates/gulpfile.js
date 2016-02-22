@@ -268,5 +268,5 @@ gulp.task('watch', function() {
 
 // Default Task
 gulp.task('default', function() {
-    runSequence('clean', 'sprite', 'resize', 'img', 'html', 'css', 'javascript', 'res', 'watch', 'server');
+    runSequence('clean', 'sprite', 'resize', 'img', 'html', 'css', 'lintjs', 'bundlejs', 'res', 'watch', 'server');
 });

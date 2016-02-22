@@ -42,7 +42,7 @@ npm install express --save -E
 
 #bower
 bower init
-bower install normalize.css --save -E
+bower install bootstrap-sass --save -E
 
 #gulp
 sudo npm install gulp --save-dev -E

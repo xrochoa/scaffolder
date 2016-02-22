@@ -39,6 +39,22 @@ gulp.task('clean', function() {
 });
 
 /*
+RESOURCES
+*/
+
+//Copy files from resources
+gulp.task('res', function() {
+    gulp.src('src/res/**/*')
+        .pipe(gulp.dest('dist/res'));
+});
+
+//Copy files from bootstrap-sass (not a default task)
+gulp.task('bootstrap', function() {
+    gulp.src('bower_components/bootstrap-sass/assets/stylesheets/**/*')
+        .pipe(gulp.dest('src/scss/bootstrap'));
+});
+
+/*
 IMAGES
 */
 
@@ -234,16 +250,6 @@ gulp.task('css', function() {
 });
 
 /*
-RESOURCES
-*/
-
-//Copy files from resources folder
-gulp.task('res', function() {
-    gulp.src('src/res/**/*')
-        .pipe(gulp.dest('dist/res'));
-});
-
-/*
 SERVER - WATCH - DEFAULT
 */
 
@@ -257,16 +263,16 @@ gulp.task('server', function() {
 //Watches Files For Changes
 gulp.task('watch', function() {
     livereload.listen();
+    gulp.watch('src/res/**/*', ['res']);
     gulp.watch('src/sprite/**/*', ['sprite']);
     gulp.watch('src/img/**/*@2x.*', ['resize', 'img']);
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/scss/**/*.scss', ['css']);
     gulp.watch('src/js/app/**/*.js', ['lintjs', 'bundlejs']);
-    gulp.watch('src/res/**/*', ['res']);
 });
 
 
 // Default Task
 gulp.task('default', function() {
-    runSequence('clean', 'sprite', 'resize', 'img', 'html', 'css', 'lintjs', 'bundlejs', 'res', 'watch', 'server');
+    runSequence('clean', 'res', 'sprite', 'resize', 'img', 'html', 'css', 'lintjs', 'bundlejs', 'watch', 'server');
 });

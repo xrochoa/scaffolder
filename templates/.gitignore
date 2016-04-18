@@ -7,8 +7,8 @@ node_modules
 
 #files and folders that are deleted and recreated everytime gulp runs
 dist
-src/js/bundle.js
-src/css/style.css
+src/assets/js
+src/assets/css
 
 #npm error log
 npm-debug.log

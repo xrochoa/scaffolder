@@ -1,58 +1,57 @@
-#Inside ~
+#inside project
 touch server.js
 touch gulpfile.js
 touch .gitignore
-mkdir tests
-mkdir utils
+#mkdir tests
+#mkdir utils
 mkdir src
 cd src
-	#Inside SRC
+	#inside src
 	touch index.html
-	mkdir views
-	mkdir img
-	mkdir sprite
-	mkdir scss
-	mkdir css
-	mkdir js
-	mkdir res
-	cd scss
-		#Inside SCSS
-		touch style.scss
-		touch _palette.scss
-		touch _sprite.scss
-		cd ..
-	#Inside SRC
-	cd js
-		#Inside JS
+	mkdir assets
+	cd assets
+		#inside assets
+		mkdir img
+		mkdir scss
+		mkdir css
+		mkdir js
 		mkdir app
-		cd app
-			#Inside APP
-			touch app.js
-			touch ga.js
+		mkdir lib
+		mkdir res
+		cd scss
+			#inside scss
+			touch style.scss
+			touch _normalize.scss
+			touch _utils.scss
+			touch _colors.scss
+			touch _fonts.scss
+			touch _main.scss
+			touch _responsive.scss
+			touch _init.scss
 			cd ..
-		#Inside JS
+		#inside assets
+		cd app
+			#inside app
+			touch app.js
+			cd ..
+		#inside assets
 		cd ..
-	#Inside SRC
+	#inside src
 	cd ..
-#Inside ~
+#inside project
 
 #npm
 npm init
-npm install express --save -E
+npm install express --save-dev -E
 
 #bower
 bower init
-bower install normalize.css --save -E
 
 #gulp
 sudo npm install gulp --save-dev -E
 #gulp images
-sudo npm install sprity --save-dev -E
-sudo npm install sprity-sass --save-dev -E
-sudo npm install gulp-image-resize --save-dev -E
 sudo npm install gulp-imagemin --save-dev -E
 #gulp html
-sudo npm install gulp-cdnizer --save-dev -E
 sudo npm install gulp-minify-html --save-dev -E
 #gulp css
 sudo npm install gulp-sass --save-dev -E
@@ -61,96 +60,53 @@ sudo npm install gulp-minify-css --save-dev -E
 #gulp javascript
 sudo npm install jshint --save-dev -E
 sudo npm install gulp-jshint --save-dev -E
-sudo npm install gulp-browserify --save-dev -E
+sudo npm install browserify --save-dev -E
 sudo npm install gulp-uglify --save-dev -E
 #gulp server
 sudo npm install gulp-nodemon --save-dev -E
 sudo npm install gulp-livereload --save-dev -E
 #gulp utilities
-sudo npm install gulp-clean --save-dev -E
-sudo npm install gulp-if --save-dev -E
-sudo npm install gulp-concat --save-dev -E
-sudo npm install gulp-rename --save-dev -E
+sudo npm install gulp-usemin --save-dev -E
+sudo npm install del --save-dev -E
 sudo npm install run-sequence --save-dev -E
+sudo npm install vinyl-source-stream --save-dev -E
+sudo npm install gulp-streamify --save-dev -E
+sudo npm install glob --save-dev -E
 
 
-#Choose from templates
-	#Get bash script path
+#variable with bash script path
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-	#server.js
-	cat $DIR/templates/server.js >> server.js
-	#gulpfile.js
-	cat $DIR/templates/gulpfile.js >> gulpfile.js
-	#.ignore
-	cat $DIR/templates/.gitignore >> .gitignore
-	#app.js and Google Analytics
-	cat $DIR/templates/app.js >> src/js/app/app.js
-	cat $DIR/templates/ga.js >> src/js/app/ga.js
-	#scss
-	cat $DIR/templates/style.scss >> src/scss/style.scss
-	cat $DIR/templates/_palette.scss >> src/scss/_palette.scss
 
+#server.js
+cat $DIR/templates/server.js >> server.js
+#gulpfile.js
+cat $DIR/templates/gulpfile.js >> gulpfile.js
+#.ignore
+cat $DIR/templates/.gitignore >> .gitignore
+#app.js
+cat $DIR/templates/app.js >> src/assets/app/app.js
+#scss
+cat $DIR/templates/style.scss >> src/assets/scss/style.scss
+#index.html
+cat $DIR/templates/index.html >> src/index.html
+#_normalize.scss
+cat $DIR/templates/_normalize.scss >> src/assets/scss/_normalize.scss
+#_responsive.scss
+cat $DIR/templates/_responsive.scss >> src/assets/scss/_responsive.scss
 
-	#index.html
-	if [ $# == 0 ]; then
-		echo "Scaffolding an simple template"
-		cat $DIR/templates/index.html >> src/index.html
-	fi
-
-	if [ $# == 1 ]; then
-	    case $1 in
-		    -d | -d3 ) 			echo "Scaffolding d3.js and Bootstrap project"
-								cat $DIR/templates/d3/index.html >> src/index.html
-								bower install d3 --save -E
-								bower install bootstrap --save -E
-		        				;;
-		    -a | -angular ) 	echo "Scaffolding AngularJS, Bootstrap and UI Bootstrap project"
-								cat $DIR/templates/angular/index.html >> src/index.html
-								cat $DIR/templates/angular/about.html >> src/views/about.html
-								cat $DIR/templates/angular/app.js > src/js/app/app.js
-								cat $DIR/templates/angular/app.about.js >> src/js/app/app.about.js
-								cat $DIR/templates/angular/app.controller.js >> src/js/app/app.controller.js
-								bower install angular --save -E
-								bower install bootstrap --save -E
-								bower install angular-bootstrap --save -E
-								bower install angular-animate --save -E
-								bower install angular-aria --save -E
-								bower install angular-cookies --save -E
-								bower install angular-message-format --save -E
-								bower install angular-messages --save -E
-								bower install angular-resource --save -E
-								bower install angular-route --save -E
-								bower install angular-sanitize --save -E
-								bower install angular-touch --save -E
-		        				;;
-		    -j | -jquery ) 		echo "Scaffolding JQuery and Bootstrap project"
-								cat $DIR/templates/bootstrap/index.html >> src/index.html
-								bower install bootstrap --save -E
-								bower install jquery --save -E
-		        				;;
-		    -p | -phaser )	 	echo "Scaffolding Phaser project"
-								cat $DIR/templates/phaser/index.html >> src/index.html
-								bower install phaser --save -E
-		        				;;
-		    * ) 				echo "There is no support for that. Scaffolding an simple template"
-		esac
-	fi
-
-	if [ $# -gt 1 ]; then
-		echo "There is no support for that. Scaffolding an simple template"
-		cat $DIR/templates/index.html >> src/index.html
-	fi
-
-#git & github
+#readme
 echo "# ${PWD##*/}" >> README.md
-echo "###### by Xavi Ro" >> README.md
+cat $DIR/templates/README.md >> README.md
+
+#git
 git init
 git add .
 git commit -m 'first commit'
 
 #done
-toilet -f bigmono9 -F gay 'DONE!'
-
+GREEN='\033[0;32m'
+NC='\033[0m'
+printf "${GREEN}Scaffolder Template Ready :)${NC}\n"
 
 
 

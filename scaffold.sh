@@ -89,10 +89,8 @@ cat $DIR/templates/app.js >> src/assets/app/app.js
 cat $DIR/templates/style.scss >> src/assets/scss/style.scss
 #index.html
 cat $DIR/templates/index.html >> src/index.html
-#_normalize.scss
+#normalize.scss
 cat $DIR/templates/_normalize.scss >> src/assets/scss/_normalize.scss
-#_responsive.scss
-cat $DIR/templates/_responsive.scss >> src/assets/scss/_responsive.scss
 
 #readme
 echo "# ${PWD##*/}" >> README.md

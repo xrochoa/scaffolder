@@ -1,6 +1,6 @@
 # scaffolder
-
 Creates a frontend project template
-
-##Use
-** sudo scaffold**
+---
+## Run:
+* 'scaffold' to setup a project
+* 'subscaffold <folder name>' from project to create a subpage inside the project

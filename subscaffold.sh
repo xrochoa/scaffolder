@@ -48,7 +48,7 @@ if [ $# == 1 ]; then
 	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 	#index.html
-	cat $DIR/templates/index.html >> src/$1/index.html
+	cat $DIR/templates/subindex.html >> src/$1/index.html
 	#scss
 	cat $DIR/templates/substyle.scss >> src/assets/scss/$1/style.scss
 	#_responsive.scss
@@ -58,7 +58,7 @@ if [ $# == 1 ]; then
 
 	#git
 	git add .
-	git commit -m 'added $1 subpage'
+	git commit -m 'added ${$1} subpage'
 
 	#done
 	GREEN='\033[0;32m'

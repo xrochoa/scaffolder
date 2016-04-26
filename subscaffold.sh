@@ -56,9 +56,6 @@ if [ $# == 1 ]; then
 	#app.js
 	cat $DIR/templates/app.js >> src/assets/app/$1/app.js
 
-	#git
-	git add .
-	git commit -m 'added ${$1} subpage'
 
 	#done
 	GREEN='\033[0;32m'

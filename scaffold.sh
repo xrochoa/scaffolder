@@ -63,7 +63,7 @@ sudo npm install gulp-clean-css --save-dev -E
 sudo npm install jshint --save-dev -E
 sudo npm install gulp-jshint --save-dev -E
 sudo npm install browserify --save-dev -E
-#sudo npm install gulp-uglify --save-dev -E
+sudo npm install gulp-uglify --save-dev -E
 #gulp server
 sudo npm install gulp-nodemon --save-dev -E
 sudo npm install gulp-livereload --save-dev -E

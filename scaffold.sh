@@ -52,16 +52,18 @@ sudo npm install gulp --save-dev -E
 #gulp images
 sudo npm install gulp-imagemin --save-dev -E
 #gulp html
-sudo npm install gulp-minify-html --save-dev -E
+#sudo npm install gulp-minify-html --save-dev -E
+sudo npm install gulp-htmlmin --save-dev -E
 #gulp css
 sudo npm install gulp-sass --save-dev -E
 sudo npm install gulp-autoprefixer --save-dev -E
-sudo npm install gulp-minify-css --save-dev -E
+#sudo npm install gulp-minify-css --save-dev -E
+sudo npm install gulp-clean-css --save-dev -E
 #gulp javascript
 sudo npm install jshint --save-dev -E
 sudo npm install gulp-jshint --save-dev -E
 sudo npm install browserify --save-dev -E
-sudo npm install gulp-uglify --save-dev -E
+#sudo npm install gulp-uglify --save-dev -E
 #gulp server
 sudo npm install gulp-nodemon --save-dev -E
 sudo npm install gulp-livereload --save-dev -E

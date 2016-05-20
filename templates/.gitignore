@@ -5,6 +5,9 @@
 bower_components
 node_modules
 
+#project specific files ai, psd, pdf
+comps
+
 #files and folders that are deleted and recreated everytime gulp runs
 dist
 src/assets/js

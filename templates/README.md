@@ -1,7 +1,5 @@
 ---
 ## Run:
-* 'sudo npm install' to install dependencies
-* 'gulp' to build project
+* 'sudo npm install' - Installs dependencies
+* 'gulp' - Build optimized project and serves at http://localhost:8000
 ---
-## Server:
-* The distribution version with sourcemaps is served at http://localhost:8000

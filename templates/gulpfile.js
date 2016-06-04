@@ -78,7 +78,7 @@ gulp.task('js', function() {
         .pipe(jshint.reporter('default'))
         .pipe(sourcemaps.init())
         .pipe(include())
-        .pipe(ngAnnotate()) //for angular apps
+        //.pipe(ngAnnotate()) //for angular apps
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/assets/js'))

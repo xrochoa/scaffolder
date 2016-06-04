@@ -67,7 +67,7 @@ sudo npm install gulp-livereload --save-dev -E
 #gulp utilities
 sudo npm install del --save-dev -E
 sudo npm install run-sequence --save-dev -E
-sudo npm install sourcemaps --save-dev -E
+sudo npm install gulp-sourcemaps --save-dev -E
 
 
 #variable with bash script path

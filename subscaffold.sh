@@ -28,7 +28,7 @@ if [ $# == 1 ]; then
 				#inside scss
 				cd ..
 			#inside assets
-			cd app
+			cd js
 				#inside app
 				mkdir $1
 				cd $1
@@ -54,7 +54,7 @@ if [ $# == 1 ]; then
 	#_responsive.scss
 	cat $DIR/templates/_responsive.scss >> src/assets/scss/$1/_responsive.scss
 	#app.js
-	cat $DIR/templates/app.js >> src/assets/app/$1/app.js
+	cat $DIR/templates/app.js >> src/assets/js/$1/app.js
 
 
 	#done

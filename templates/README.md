@@ -4,5 +4,4 @@
 * 'gulp' to build project
 ---
 ## Server:
-* The source version is served at http://localhost:4000
-* The distribution version is served at http://localhost:8000
+* The distribution version with sourcemaps is served at http://localhost:8000

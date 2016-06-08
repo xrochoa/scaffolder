@@ -1,6 +1,6 @@
 /*----------  LIBRARIES  ----------*/
 
-//=include ./lib/XXXXXXXXXX.js
+//=include ../lib/XXXXXXXXXX.js
 
 /*----------  CUSTOM JS  ----------*/
 

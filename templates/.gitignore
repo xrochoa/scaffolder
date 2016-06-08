@@ -8,10 +8,8 @@ node_modules
 #project specific files ai, psd, pdf
 comps
 
-#files and folders that are deleted and recreated everytime gulp runs
+#files and folders that are deleted and recreated every time gulp runs
 dist
-src/assets/js
-src/assets/css
 
 #npm error log
 npm-debug.log

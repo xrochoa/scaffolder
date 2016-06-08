@@ -48,13 +48,13 @@ if [ $# == 1 ]; then
 	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 	#index.html
-	cat $DIR/templates/subindex.html >> src/$1/index.html
+	cat $DIR/templates/subscaffold/subindex.html >> src/$1/index.html
 	#scss
-	cat $DIR/templates/substyle.scss >> src/assets/scss/$1/style.scss
+	cat $DIR/templates/subscaffold/substyle.scss >> src/assets/scss/$1/style.scss
 	#_responsive.scss
 	cat $DIR/templates/_responsive.scss >> src/assets/scss/$1/_responsive.scss
 	#app.js
-	cat $DIR/templates/app.js >> src/assets/js/$1/app.js
+	cat $DIR/templates/subscaffold/subapp.js >> src/assets/js/$1/app.js
 
 
 	#done

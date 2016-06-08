@@ -13,7 +13,6 @@ cd src
 		#inside assets
 		mkdir img
 		mkdir scss
-		mkdir css
 		mkdir js
 		mkdir res
 		cd scss

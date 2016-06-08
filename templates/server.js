@@ -1,7 +1,8 @@
 var express = require('express');
-var server = new express();
+var app = new express();
 
-server.listen(8000, function() {
-    server.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist'));
+
+app.listen(8000, function() {
     console.log('Serving at http://localhost:8000');
 });

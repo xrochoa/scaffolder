@@ -13,10 +13,13 @@
 
 ---
 ## Run:
-* 'ska-fold' to setup a project
+```shell
+ska-fold
+```
 
 ---
 ## Tree Structure
+```shell
 <project-name>
 ├── README.md
 ├── gulpfile.js
@@ -38,6 +41,7 @@
     │       ├── _utils.scss
     │       └── style.scss
     └── index.html
+```
 
 ---
 ## Support:

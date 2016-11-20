@@ -1,0 +1,34 @@
+{
+  "name": "ska-folder",
+  "version": "1.0.2",
+  "description": "A commnad-line tool to scaffold ES6 frontend projects using gulp, sass, browserify, babelify, eslint and browser-sync",
+  "main": "ska-folder.sh",
+  "scripts": {
+    "git-commit": "git add -A . && git commit -a -m 'gh-pages update'",
+    "git-push": "git push origin gh-pages --force && git checkout master",
+    "deploy": "npm run build && npm run git-commit && npm run git-push",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
+  },
+  "bin": {
+    "ska-fold": "./bin/ska-folder.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xrochoa/scaffolder.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "frontend",
+    "scaffold",
+    "es6"
+  ],
+  "author": "Xavier Reyes Ochoa <x.a.reyes-ochoa@hotmail.com> (http://www.xaviro.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xrochoa/scaffolder/issues"
+  },
+  "homepage": "https://github.com/xrochoa/scaffolder#readme",
+  "dependencies": {
+    "shelljs": "^0.7.5"
+  }
+}

@@ -2,14 +2,14 @@
 
 ---
 ##Creates a frontend project template using:
-- npm: package management
-- gulp: lint, bundle, and minify
--- sass (all css is bundled in style.css)
--- browserify, Babelify (all ES6 is bundled in main.js)
--- html and images are minified
--- resources are copied
--- browser-sync for live reloading of any change
--- eslint to check for javascript errors
+* npm: package management
+* gulp: lint, bundle, and minify
+	* sass (all css is bundled in style.css)
+	* browserify, babelify (all ES6 is bundled in main.js)
+	* html and images are minified
+	* resources are copied
+	* browser-sync for live reloading of any change
+	* eslint to check for javascript errors
 
 ---
 ## Run:
@@ -45,5 +45,5 @@ ska-fold
 
 ---
 ## Support:
-* This package was built using bash script. You'll have to become a wizard to make it work outside of Unix.
+* This package was built using bash script. You'll have to become a wizard to make it work outside of Unix...or just check out cygwin, shx or other similar tools.
 

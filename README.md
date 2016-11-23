@@ -1,6 +1,5 @@
 # ska-folder
 
----
 ##Creates a frontend project template using:
 * npm: package management
 * gulp: lint, bundle, and minify
@@ -11,13 +10,11 @@
 	* browser-sync for live reloading of any change
 	* eslint to check for javascript errors
 
----
 ## Run:
 ```shell
 ska-fold
 ```
 
----
 ## Tree Structure
 ```shell
 <project-name>
@@ -43,7 +40,6 @@ ska-fold
     └── index.html
 ```
 
----
 ## Support:
-* This package was built using bash script. You'll have to become a wizard to make it work outside of Unix...or just check out cygwin, shx or other similar tools.
+* This package was built using bash script and shelljs. Anything outside of that is not supported.
 

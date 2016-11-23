@@ -89,6 +89,7 @@ shell.exec(`
 		npm install browserify -D -E
 		npm install babelify -D -E
 		npm install babel-preset-es2015 -D -E #needed babel preset for ES6
+		npm install babel-plugin-dedent -D -E #plugin to remove tabs in template literals
 		npm install vinyl-source-stream	-D -E #transforms a source stream from browserify to vinyl
 		npm install vinyl-buffer -D -E #transforms vinyl file to buffer for gulp-uglify
 		npm install gulp-uglify -D -E

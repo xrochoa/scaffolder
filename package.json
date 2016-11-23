@@ -1,6 +1,6 @@
 {
   "name": "ska-folder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A commnad-line tool to scaffold ES6 frontend projects using gulp, sass, browserify, babelify, eslint and browser-sync",
   "main": "ska-folder.sh",
   "scripts": {

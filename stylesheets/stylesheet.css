@@ -39,7 +39,7 @@ li {
 */
 
 header {
-  background: rgba(0, 0, 0, 0.1);
+  background: black;
   width: 100%;
   border-bottom: 1px dashed white;
   padding: 20px 0;

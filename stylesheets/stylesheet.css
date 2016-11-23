@@ -68,7 +68,7 @@ header h1:before {
 header h2 {
   font-size: 18px;
   font-weight: 300;
-  color: #666;
+  color: white;
 }
 
 #downloads .btn {
@@ -140,7 +140,7 @@ ul li:before {
   content: ">>";
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 13px;
-  color: #b5e853;
+  color: white;
   margin-left: -37px;
   margin-right: 21px;
   line-height: 16px;

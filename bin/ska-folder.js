@@ -1,12 +1,13 @@
 #! /usr/bin/env node
+
 var shell = require('shelljs');
 var child_process = require('child_process');
 
 var name = process.argv[2];
 
-if(!process.argv[2]) {
-	shell.echo('Please include the name of your project');
-	shell.exit(1);
+if (!process.argv[2]) {
+    shell.echo('Please include the name of your project');
+    shell.exit(1);
 }
 
 /*----------  DIRECTORIES  ----------*/
@@ -55,20 +56,30 @@ shell.exec(`
 
 /*----------  TEMPLATES  ----------*/
 
-shell.exec(`cat ${__dirname}/templates/_gulpfile.js >> ${name}/gulpfile.js`)
-shell.exec(`cat ${__dirname}/templates/_.gitignore >> ${name}/.gitignore`)
-shell.exec(`cat ${__dirname}/templates/_main.js >> ${name}/src/assets/js/main.js`)
-shell.exec(`cat ${__dirname}/templates/_style.scss >> ${name}/src/assets/scss/style.scss`)
-shell.exec(`cat ${__dirname}/templates/_index.html >> ${name}/src/index.html`)
-shell.exec(`cat ${__dirname}/templates/_responsive.scss >> ${name}/src/assets/scss/_responsive.scss`)
-shell.exec(`cat ${__dirname}/templates/_.eslintrc.json >> ${name}/.eslintrc.json`)
-shell.exec(`echo ${name} >> ${name}/README.md`)
-shell.exec(`cat ${__dirname}/templates/_README.md >> ${name}/README.md`)
+let templates = [
+    { name: 'gulpfile.js', path: '/' },
+    { name: '.gitignore', path: '/src/assets/js/' },
+    { name: 'main.js', path: '/src/assets/js/' },
+    { name: 'style.scss', path: '/src/assets/scss/' },
+    { name: 'index.html', path: '/src/' },
+    { name: 'responsive.scss', path: '/src/assets/scss/' },
+    { name: '.eslintrc.json', path: '/' },
+    { name: 'README.md', path: '/' },
+    { name: 'README.txt', path: '/' }
+];
 
+//appends name project into README
+shell.echo(`# ${name.toUpperCase()}`).toEnd(`${name}/README.md`);
+shell.echo(`${name.toUpperCase()}`).toEnd(`${name}/README.txt`);
+
+//appends templates (uses _ to avoid npm changing some files like .gitignore )
+templates.forEach((template) => {
+    shell.cat(`${__dirname}/templates/_${template.name}`).toEnd(`${name}${template.path}${template.name}`);
+});
 
 /*----------  DEPENDENCIES  ----------*/
 
-child_process.execSync(`cd ${name}; npm init`, {stdio: 'inherit'});
+child_process.execSync(`cd ${name}; npm init`, { stdio: 'inherit' });
 shell.exec(`
 	cd ${name}
 		#DEV DEPENDENCIES

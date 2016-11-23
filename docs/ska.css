@@ -1,0 +1,24 @@
+    div.four {
+        width: 700px;
+        border: none;
+        border-top: dotted 100px black;
+        position: relative;
+        width: 700px;
+    }
+    
+    div.four:after {
+        content: '';
+        position: absolute;
+        border-top: dotted 100px black;
+        width: 100%;
+        left: 100px;
+    }
+    
+    div.four:before {
+        content: '';
+        position: absolute;
+        border-top: dotted 100px black;
+        width: 100%;
+        left: 100px;
+        top: -200px;
+    }

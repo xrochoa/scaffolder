@@ -1,4 +1,4 @@
-# SKA-FOLDER
+# Ska-folder
 A commnad-line tool to scaffold ES6 frontend projects using gulp, sass, browserify, babelify, eslint and browser-sync.
 
 ## Creates a frontend project template using:

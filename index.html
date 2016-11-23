@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Ska-folder by xrochoa</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Ska-folder</h1>
+        <h2>A scaffolder for web projects</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/xrochoa/ska-folder/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/xrochoa/ska-folder/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/xrochoa/ska-folder" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="ska-folder" class="anchor" href="#ska-folder" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ska-folder</h1>
+
+<p>A commnad-line tool to scaffold ES6 frontend projects using gulp, sass, browserify, babelify, eslint and browser-sync.</p>
+
+<h2>
+<a id="creates-a-frontend-project-template-using" class="anchor" href="#creates-a-frontend-project-template-using" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creates a frontend project template using:</h2>
+
+<ul>
+<li>npm: package management</li>
+<li>gulp: lint, bundle, and minify
+
+<ul>
+<li>sass (all css is bundled in style.css)</li>
+<li>browserify, babelify (all ES6 is bundled in main.js)</li>
+<li>html and images are minified</li>
+<li>resources are copied</li>
+<li>browser-sync for live reloading of any change</li>
+<li>eslint to check for javascript errors</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="run" class="anchor" href="#run" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run:</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ ska-fold <span class="pl-k">&lt;</span>project-name<span class="pl-k">&gt;</span></pre></div>
+
+<h2>
+<a id="tree-structure" class="anchor" href="#tree-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tree Structure</h2>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">&lt;</span>project-name<span class="pl-k">&gt;</span>
+├── README.md
+├── README.txt
+├── eslintrc.json
+├── gulpfile.js
+├── node_modules
+├── package.json
+└── src
+    ├── assets
+    │   ├── img
+    │   ├── js
+    │   │   ├── app
+    │   │   └── main.js
+    │   ├── res
+    │   └── scss
+    │       ├── _colors.scss
+    │       ├── _fonts.scss
+    │       ├── _init.scss
+    │       ├── _main.scss
+    │       ├── _responsive.scss
+    │       ├── _utils.scss
+    │       └── style.scss
+    └── index.html</pre></div>
+
+<h2>
+<a id="support" class="anchor" href="#support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support:</h2>
+
+<p>This package was built using bash script and shelljs. Anything outside of that is not supported.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright (c) 2016 Xavier Reyes Ochoa. MIT License.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
